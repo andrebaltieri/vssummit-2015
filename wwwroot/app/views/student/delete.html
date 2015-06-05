@@ -1,0 +1,14 @@
+<h3>Excluir Aluno</h3>
+<dl>
+  <dt>Nome</dt>
+  <dd>{{ vm.student.Name }}</dd>
+  <br>
+  <dt>E-mail</dt>
+  <dd>{{ vm.student.Email }}</dd>
+</dl>
+
+<a href="#/students" class="btn btn-default">Voltar</a>
+  
+<div class="btn-group pull-right">
+	<button class="btn btn-danger" ng-click="vm.submit()">Confirmar Exclusão</button>
+</div>

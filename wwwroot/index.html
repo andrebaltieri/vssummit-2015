@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="abt">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>André Baltieri Treinamentos</title>
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/styles-1.0.0.min.css" />
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse">
+	    <div class="navbar-header">
+	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	        </button>
+	        <a class="navbar-brand" href="#">André Baltieri Treinamentos</a>
+            <ul class="nav navbar-nav">
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/students">Alunos</a></li>                
+            </ul>
+	    </div>
+	</div>
+
+    <div ng-view class="container"></div>
+
+    <script src="assets/libs/scripts-1.0.0.min.js"></script>
+	<script src="app/modules.js"></script>
+    <script src="app/routes.js"></script>
+        
+    <script src="app/controllers/home/home.js"></script>
+    <script src="app/controllers/students/student-list.js"></script>
+    <script src="app/controllers/students/student-details.js"></script>
+    <script src="app/controllers/students/student-create.js"></script>
+    <script src="app/controllers/students/student-edit.js"></script>
+    <script src="app/controllers/students/student-delete.js"></script>
+</body>
+
+</html>

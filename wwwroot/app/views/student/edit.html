@@ -1,0 +1,15 @@
+<h3>Editar Aluno</h3>
+<form>
+	<div class="form-group">
+		<label>Nome</label>
+		<input type="text" class="form-control" ng-model="vm.student.Name" placeholder="Nome do Aluno">
+	</div>
+	<div class="form-group">
+		<label>E-mail</label>
+		<input type="email" class="form-control" ng-model="vm.student.Email" placeholder="E-mail do Aluno">
+	</div>
+	
+	<a href="#/students" class="btn btn-default">Voltar</a>
+	<button type="button" class="btn btn-success pull-right" ng-click="vm.submit()">Salvar</button>
+		
+</form>

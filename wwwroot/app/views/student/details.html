@@ -1,0 +1,18 @@
+<h3>Detalhes do Aluno</h3>
+<dl>
+  <dt>Nome</dt>
+  <dd>{{ vm.student.Name }}</dd>
+  <br>
+  <dt>E-mail</dt>
+  <dd>{{ vm.student.Email }}</dd>
+  <br>
+  <dt>Imagem</dt>
+  <dd><img ng-src="{{ vm.student.Image }}" alt=""></dd>
+</dl>
+
+<a href="#/students" class="btn btn-default">Voltar</a>
+  
+<div class="btn-group pull-right">
+  <a href="#/students/edit/{{ vm.student.Id }}" class="btn btn-primary"><i class="fa fa-edit"></i> Editar</a>
+  <a href="#/students/delete/{{ vm.student.Id }}" class="btn btn-danger"><i class="fa fa-remove"></i> Remover</a>
+</div>

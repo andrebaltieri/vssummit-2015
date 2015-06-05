@@ -1,0 +1,34 @@
+<h3>Lista de Alunos</h3>
+<a href="#/students/create" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Novo</a>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th class="text-center">#</th>
+			<th class="text-center">Imagem</th>
+			<th class="text-center">Nome</th>
+			<th class="text-center">E-mail</th>
+			<th class="text-center"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan="5">
+				<input type="text" class="form-control" ng-model="vm.GridFilter" placeholder="Filtrar..." />
+			</td>
+		</tr>
+		<tr ng-repeat="student in vm.students | filter: { 'Name' : vm.GridFilter }">
+			<td class="text-center">{{ student.Id }}</td>
+			<td class="text-center"><img ng-src="{{ student.Image }}" alt="" width="40px"></td>
+			<td class="text-left">{{ student.Name }}</td>
+			<td class="text-center">{{ student.Email }}</td>
+			<td class="text-center">
+				<div class="btn-group">
+					<a href="#/students/details/{{ student.Id }}" class="btn btn-info btn-sm"><i class="fa fa-list"></i></a>
+					<a href="#/students/edit/{{ student.Id }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+					<a href="#/students/delete/{{ student.Id }}" class="btn btn-danger btn-sm"><i class="fa fa-remove"></i></a>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
